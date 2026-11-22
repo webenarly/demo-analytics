@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "store": "Fernhill Goods",
+    "generatedAt": "2026-11-22T08:00:00Z",
+    "isSampleData": true
+  },
+  "summary": "Fernhill Goods appeared in 68% of 240 sampled shopper-style questions and ranks 2nd of 4 tracked brands. Review sites drive most of your citations; comparison questions are where you lose ground.",
+  "analysis": {
+    "questionsSampled": 240,
+    "steps": [
+      { "id": "connect", "label": "Connecting store", "description": "Verifying the sample storefront connection.", "durationMs": 1800 },
+      { "id": "collect", "label": "Collecting data", "description": "Sampling 240 shopper-style questions across AI assistants.", "durationMs": 3200 },
+      { "id": "analyze", "label": "Analyzing answers", "description": "Detecting brand mentions, positions and cited sources.", "durationMs": 2800 },
+      { "id": "report", "label": "Building report", "description": "Ranking competitors and drafting recommendations.", "durationMs": 2200 }
+    ]
+  },
+  "citations": [
+    { "source": "Trailhead Review", "domain": "trailheadreview.example", "type": "Review site", "count": 214 },
+    { "source": "Gearlist Weekly", "domain": "gearlistweekly.example", "type": "Editorial", "count": 187 },
+    { "source": "Fernhill Goods product pages", "domain": "fernhillgoods.example", "type": "Your site", "count": 163 },
+    { "source": "Camp & Carry Forum", "domain": "campcarry.example", "type": "Forum", "count": 129 },
+    { "source": "Outdoor Basics Wiki", "domain": "outdoorbasics.example", "type": "Reference", "count": 96 },
+    { "source": "Shopwise Compare", "domain": "shopwise.example", "type": "Comparison", "count": 71 }
+  ],
+  "competitors": [
+    { "name": "Alder & Oak", "isStore": false, "visibility": 74, "mentions": 1402, "avgPosition": 1.9, "positiveSentiment": 79, "change": 2 },
+    { "name": "Fernhill Goods", "isStore": true, "visibility": 68, "mentions": 1284, "avgPosition": 2.4, "positiveSentiment": 82, "change": 5 },
+    { "name": "Brightpine Supply", "isStore": false, "visibility": 61, "mentions": 1102, "avgPosition": 2.9, "positiveSentiment": 74, "change": -1 },
+    { "name": "Marlow Market", "isStore": false, "visibility": 49, "mentions": 842, "avgPosition": 3.6, "positiveSentiment": 68, "change": 3 }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-structured-data",
+      "title": "Add structured product data to your top 20 pages",
+      "description": "Pages with complete price, availability and review markup are cited about twice as often in the sample. Start with your best sellers.",
+      "priority": "high",
+      "impact": "High",
+      "effort": "Medium"
+    },
+    {
+      "id": "rec-comparison-answers",
+      "title": "Answer comparison questions directly",
+      "description": "You trail Alder & Oak on \"X vs Y\" questions. A short, honest comparison page per category gives assistants something quotable.",
+      "priority": "high",
+      "impact": "High",
+      "effort": "Low"
+    },
+    {
+      "id": "rec-refresh-guides",
+      "title": "Refresh buying guides older than 12 months",
+      "description": "Four guides that used to be cited are now skipped. Update specs, prices and dates, then re-publish.",
+      "priority": "medium",
+      "impact": "Medium",
+      "effort": "Medium"
+    },
+    {
+      "id": "rec-review-coverage",
+      "title": "Earn coverage on two more review sites",
+      "description": "Review sites are your biggest citation source. Sending samples to two more outlets widens that base.",
+      "priority": "medium",
+      "impact": "Medium",
+      "effort": "High"
+    },
+    {
+      "id": "rec-faq-markup",
+      "title": "Add FAQ markup to shipping and returns",
+      "description": "Assistants rarely quote your policies today. Clear FAQ blocks make them easier to reuse accurately.",
+      "priority": "low",
+      "impact": "Low",
+      "effort": "Low"
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Analytics · AI search visibility (self-initiated demo)</title>
+  <meta name="description" content="Self-initiated portfolio demo of an AI search visibility dashboard. Fictional brand, sample data only.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Inline favicon: no extra request, no 404 -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f766e'/%3E%3Cpath d='M9 21l5-6 4 3 5-8' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+
+  <!-- Enables scroll-reveal styles only when JS runs (no-JS users see everything). -->
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="app">
+    <!-- Sidebar on desktop, bottom navigation on mobile -->
+    <div class="sidebar">
+      <div class="brand">
+        <!-- Generic placeholder mark, not a real logo -->
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="currentColor"/>
+          <path d="M9 21l5-6 4 3 5-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand__name">Demo Analytics</span>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li>
+            <a class="nav__link" href="#overview" data-nav="overview">
+              <svg class="nav__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.8"/></svg>
+              <span class="nav__label">Overview</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="#progress" data-nav="progress">
+              <svg class="nav__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+              <span class="nav__label">Progress</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="#report" data-nav="report">
+              <svg class="nav__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg>
+              <span class="nav__label">Report</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav__link" href="#states" data-nav="states">
+              <svg class="nav__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+              <span class="nav__label">States</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="sidebar__note">Demo build. Fictional brand and sample data.</p>
+    </div>
+
+    <div class="app__main">
+      <header class="topbar">
+        <div class="brand topbar__brand">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <rect width="32" height="32" rx="9" fill="currentColor"/>
+            <path d="M9 21l5-6 4 3 5-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand__name">Demo Analytics</span>
+        </div>
+        <div class="topbar__heading">
+          <p class="topbar__eyebrow">AI search visibility</p>
+          <h1 class="topbar__title" id="page-title" tabindex="-1">Overview</h1>
+        </div>
+        <div class="topbar__meta">
+          <span class="badge badge--demo">Demo</span>
+          <span class="chip" id="period-chip">Last 12 weeks</span>
+        </div>
+      </header>
+
+      <main class="main" id="main">
+        <!-- Removed by app.js. If it stays visible, JS/modules did not run. -->
+        <p class="card" id="boot-notice">Loading the demo… If this message stays, serve this folder over HTTP (see README.md) instead of opening the file directly.</p>
+
+        <!-- ============ 1. OVERVIEW ============ -->
+        <section class="view" id="view-overview" aria-label="Overview" hidden>
+          <div class="view__slot" data-state-slot></div>
+          <div class="view__content" data-content hidden>
+            <ul class="kpi-grid" aria-label="Key metrics">
+              <li class="card card--hover kpi" data-reveal>
+                <h2 class="kpi__label">Visibility score</h2>
+                <p class="kpi__value"><span data-kpi="score">0</span><span class="kpi__unit">/ 100</span></p>
+                <p class="kpi__foot" data-kpi-foot="score"></p>
+              </li>
+              <li class="card card--hover kpi" data-reveal>
+                <h2 class="kpi__label">AI mentions</h2>
+                <p class="kpi__value"><span data-kpi="mentions">0</span></p>
+                <p class="kpi__foot" data-kpi-foot="mentions"></p>
+              </li>
+              <li class="card card--hover kpi" data-reveal>
+                <h2 class="kpi__label">Competitor rank</h2>
+                <p class="kpi__value"><span data-kpi="rank"></span><span class="kpi__unit" data-kpi-total></span></p>
+                <p class="kpi__foot" data-kpi-foot="rank"></p>
+              </li>
+              <li class="card card--hover kpi" data-reveal>
+                <h2 class="kpi__label">Trend</h2>
+                <p class="kpi__value"><span data-kpi="trend">0</span><span class="kpi__unit">pts</span></p>
+                <div class="kpi__foot"><span data-kpi-foot="trend"></span></div>
+                <div class="kpi__spark" id="spark"></div>
+              </li>
+            </ul>
+
+            <div class="overview-row">
+              <article class="card ring-card" data-reveal>
+                <h2 class="card__title">Score</h2>
+                <p class="card__subtitle">Share of tested AI answers that mention <span data-store>your store</span>.</p>
+                <div class="ring" id="ring" role="img" aria-label="Visibility score" style="--p:0">
+                  <div class="ring__track"></div>
+                  <div class="ring__half ring__half--right"><div class="ring__bar"></div></div>
+                  <div class="ring__half ring__half--left"><div class="ring__bar"></div></div>
+                  <div class="ring__center" aria-hidden="true">
+                    <span class="ring__value" data-ring-value>0</span>
+                    <span class="ring__unit">out of 100</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card" data-reveal>
+                <header class="card__header">
+                  <div>
+                    <h2 class="card__title">Visibility over time</h2>
+                    <p class="card__subtitle">Weekly share of AI answers that mention your store</p>
+                  </div>
+                </header>
+                <div class="chart-host" id="chart-line"></div>
+              </article>
+            </div>
+
+            <article class="card" data-reveal>
+              <header class="card__header">
+                <div>
+                  <h2 class="card__title">Your store vs. competitors</h2>
+                  <p class="card__subtitle">Visibility score by brand, latest week</p>
+                </div>
+                <ul class="legend" aria-label="Legend">
+                  <li class="legend__item"><span class="legend__swatch legend__swatch--accent" aria-hidden="true"></span>Your store</li>
+                  <li class="legend__item"><span class="legend__swatch" aria-hidden="true"></span>Competitors</li>
+                </ul>
+              </header>
+              <div class="chart-host" id="chart-bars"></div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ============ 2. ANALYSIS PROGRESS ============ -->
+        <section class="view" id="view-progress" aria-label="Analysis progress" hidden>
+          <div class="view__slot" data-state-slot></div>
+          <div class="view__content" data-content hidden>
+            <article class="card" data-reveal>
+              <header class="card__header">
+                <div>
+                  <h2 class="card__title">Analyzing <span data-store>your store</span></h2>
+                  <p class="card__subtitle" id="progress-status" aria-live="polite">Ready to start</p>
+                </div>
+                <div class="progress-card__actions">
+                  <a class="btn btn--primary" id="progress-done" href="#report" hidden>View report</a>
+                  <button class="btn btn--secondary" type="button" id="progress-replay">
+                    <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 1 0 2.6-5.9M4 4v4h4"/></svg>
+                    Replay
+                  </button>
+                </div>
+              </header>
+              <div class="progress" id="progress-bar" role="progressbar" aria-label="Analysis progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="progress__fill" id="progress-fill"></div>
+              </div>
+              <p class="progress__meta"><span id="progress-pct">0%</span><span id="progress-detail"></span></p>
+              <ol class="steps" id="steps-list" aria-label="Analysis steps"></ol>
+            </article>
+          </div>
+        </section>
+
+        <!-- ============ 3. REPORT ============ -->
+        <section class="view" id="view-report" aria-label="Report" hidden>
+          <div class="view__slot" data-state-slot></div>
+          <div class="view__content" data-content hidden>
+            <div class="card report-summary" data-reveal><p id="report-summary"></p></div>
+
+            <section class="card" data-reveal aria-labelledby="h-citations">
+              <header class="card__header">
+                <div>
+                  <h2 class="card__title" id="h-citations">Citations</h2>
+                  <p class="card__subtitle">Sources AI answers cite when they mention your store</p>
+                </div>
+              </header>
+              <ul class="citations" id="citations-list"></ul>
+            </section>
+
+            <section class="card" data-reveal aria-labelledby="h-competitors">
+              <header class="card__header">
+                <div>
+                  <h2 class="card__title" id="h-competitors">Competitors</h2>
+                  <p class="card__subtitle">How each tracked brand shows up in the same questions</p>
+                </div>
+              </header>
+              <div class="table-wrap" role="region" aria-label="Competitor comparison table, scrollable" tabindex="0">
+                <table class="table">
+                  <caption class="sr-only">Competitor visibility, mentions, average position, sentiment and weekly change</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Brand</th>
+                      <th scope="col" class="num">Visibility</th>
+                      <th scope="col" class="num">Mentions</th>
+                      <th scope="col" class="num">Avg. position</th>
+                      <th scope="col" class="num">Positive</th>
+                      <th scope="col" class="num">Change</th>
+                    </tr>
+                  </thead>
+                  <tbody id="competitor-rows"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section aria-labelledby="h-recs">
+              <header class="section-header" data-reveal>
+                <h2 class="section-header__title" id="h-recs">Recommendations</h2>
+              </header>
+              <ul class="rec-grid" id="rec-list"></ul>
+            </section>
+          </div>
+        </section>
+
+        <!-- ============ 4. STATES SHOWCASE ============ -->
+        <section class="view" id="view-states" aria-label="States showcase" hidden>
+          <div class="view__content">
+            <div class="card states-toolbar" data-reveal>
+              <div>
+                <h2 class="card__title">Preview a state</h2>
+                <p class="card__subtitle">Every view has a loading, empty and error state. Pick one to see all three views.</p>
+              </div>
+              <div class="segmented" role="radiogroup" aria-label="State to preview">
+                <label class="segmented__item"><input class="segmented__input" type="radio" name="preview-state" value="loading" checked><span class="segmented__label">Loading</span></label>
+                <label class="segmented__item"><input class="segmented__input" type="radio" name="preview-state" value="empty"><span class="segmented__label">Empty</span></label>
+                <label class="segmented__item"><input class="segmented__input" type="radio" name="preview-state" value="error"><span class="segmented__label">Error</span></label>
+              </div>
+            </div>
+            <div class="states-grid">
+              <article class="card" data-reveal><h3 class="card__title">Overview</h3><div data-preview="overview"></div></article>
+              <article class="card" data-reveal><h3 class="card__title">Analysis progress</h3><div data-preview="progress"></div></article>
+              <article class="card" data-reveal><h3 class="card__title">Report</h3><div data-preview="report"></div></article>
+            </div>
+            <p class="sr-only" id="states-live" role="status"></p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Persistent on every view -->
+      <footer class="footer">
+        <p class="footer__banner"><span class="badge badge--demo">Demo</span> Self-initiated demo, not a client project. Sample data only.</p>
+      </footer>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

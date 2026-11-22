@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "store": "Fernhill Goods",
+    "periodLabel": "Last 12 weeks",
+    "generatedAt": "2026-11-22T08:00:00Z",
+    "isSampleData": true
+  },
+  "kpis": {
+    "visibilityScore": { "value": 68, "previous": 63, "max": 100 },
+    "mentions": { "value": 1284, "previous": 1121 },
+    "competitorRank": { "value": 2, "total": 4, "previous": 3 },
+    "trend": { "changePoints": 16, "windowWeeks": 12 }
+  },
+  "visibilitySeries": {
+    "unit": "%",
+    "labels": ["Aug 31", "Sep 7", "Sep 14", "Sep 21", "Sep 28", "Oct 5", "Oct 12", "Oct 19", "Oct 26", "Nov 2", "Nov 9", "Nov 16"],
+    "values": [52, 54, 53, 57, 59, 58, 62, 61, 64, 66, 65, 68]
+  },
+  "competitors": [
+    { "name": "Alder & Oak", "score": 74, "isStore": false },
+    { "name": "Fernhill Goods", "score": 68, "isStore": true },
+    { "name": "Brightpine Supply", "score": 61, "isStore": false },
+    { "name": "Marlow Market", "score": 49, "isStore": false }
+  ]
+}
